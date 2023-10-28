@@ -1,0 +1,29 @@
+.container {
+  background-color: var(--background);
+  display: flex;
+  justify-content: center;
+  padding: 60px;
+  background-size: 25px 25px;
+  background-image: radial-gradient(var(--background-ultra-light) 1px, transparent 1px);
+  // font-size: 0.8em;
+  // font-weight: lighter;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.h1 {
+  font-size: 4em;
+}
+
+.footer {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  height: 300px;
+}

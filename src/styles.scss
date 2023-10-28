@@ -1,1 +1,144 @@
-/* You can add global styles to this file, and also import other style files */
+@import "@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+
+:root {
+  --small-screen: 1024px;
+  --margin: 30px;
+  --action-button-width: 160px;
+
+  --color-green: #A3D471;
+  --color-red: #CF3658;
+  --color-grey: #545454;
+  --color-blue: #156797;
+  --color-orange: #FD943C;
+  --color-yellow: yellow;
+
+}
+
+@mixin darken() {
+  --background: #1A1A1A;
+  --background-light: #2A2A2A;
+  --background-ultra-light: #3d3d3d;
+  --text-color: #fff;
+  --text-color-light: #C3C3C3;
+}
+
+@mixin lighten() {
+  --background: #e7e9ef;
+  --background-light: #f6f7f9;
+  --background-ultra-light: #d0d2d7;
+  --text-color: #000;
+  --text-color-light: #4e525d;
+}
+
+body.dark {
+  @include darken();
+}
+
+body.light {
+  @include lighten();
+}
+
+
+html, div {
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Open sans', sans-serif;
+  width: 100%;
+  height: 100%;
+  letter-spacing: 0.5px;
+  font-size: 1rem;
+  background-color: var(--background);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+.mdc-tooltip__surface {
+  margin-top: 10px !important;
+  background-color: white !important;
+  padding: 10px !important;
+  overflow: hidden !important;
+  color: black !important;
+  text-align: center !important;
+}
+
+.section {
+  border-radius: 10px;
+  background: var(--background-light);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.50);
+}
+
+.sub-section {
+  border-radius: 10px;
+  background: var(--background);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.50);
+  padding: 40px;
+}
+
+.inner-section {
+  height: 100%;
+  width: 100%;
+}
+
+.h1 {
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(96deg, #fdbd86 -16.88%, #FD943C 83.22%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.h2 {
+  padding: 0;
+  margin: 0;
+  color: var(--text-color);
+  font-size: 1em;
+  font-weight: normal;
+}
+
+.h3 {
+  padding: 0;
+  margin: 0;
+  color: var(--text-color-light);
+  font-size: 0.9em;
+  font-weight: normal;
+}
+
+.light-text {
+  padding: 0;
+  margin: 0;
+  font-size: 0.9em;
+  color: var(--text-color-light);
+}
+
+input, select {
+  border-radius: 4px;
+  background-color: var(--background-ultra-light);
+  color: var(--text-color-light);
+  border: none;
+  padding: 10px;
+}
+
+.mat-icon {
+  overflow: unset !important;
+}
+
+.mat-mdc-snack-bar-container {
+  &.success-snack-bar {
+    --mdc-snackbar-container-color: #A3D471;
+    --mat-mdc-snack-bar-button-color: black;
+    --mdc-snackbar-supporting-text-color: black;
+  }
+}
+
+a {
+  color: #FD943C;
+  text-decoration: none;
+  font-weight: normal;
+}

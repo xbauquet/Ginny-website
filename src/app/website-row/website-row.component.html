@@ -1,0 +1,19 @@
+<div class=" row" [style]="reverse ? 'flex-direction: row-reverse' : ''">
+  <div class="container">
+    <div class="h1 light-title" [style]="getH1Style()">
+      {{ title }}
+    </div>
+    <div class="text">
+      <ng-content></ng-content>
+    </div>
+    <div>
+      <app-button [title]="'Try the app'"
+                  [color]="getColor()"
+                  (click)="openApp()"></app-button>
+    </div>
+  </div>
+  <div class="container" style="align-items: center">
+    <img [src]="lightImg" *ngIf="theme === 'light'" alt="" [style]="'width:' + imageWidth"/>
+    <img [src]="darkImg" *ngIf="theme === 'dark'" alt="" [style]="'width:' + imageWidth"/>
+  </div>
+</div>
